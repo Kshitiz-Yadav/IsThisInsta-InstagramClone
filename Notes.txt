@@ -1,11 +1,31 @@
 1. Create new project. Make project a GIT repository.
-2. Remove the top action bar.
+2. Remove the top action bar by setting "NoActionBar" in themes.xml.
 
 CREATING THE HOME PAGE NAVIGATION BARS
 3. Divide the screen into three parts using co-ordinator layout.
-
+___________________________________________________________________________________________________________________________________________________
 NOTE 1: Co-ordinator layout-
 	It is a super powered frame layout which is used to hold more than one child views. It allows interaction between different child views.
 	This allows different child views to be displayed without overlapping each other in devices of different sizes.
+___________________________________________________________________________________________________________________________________________________
 
 4. Create a relative layout in the co-ordinator layout and then the 3 parts within that relative layout.
+	i) TopNavBarRelativeLayout
+		For holding the app name, chat plane.
+		Uses the AppBarLayout to implement toolbar. 
+		AppBarLayout when working with coordinatorLayout implements various scrolling gestures.
+	ii) MiddleSectionRelativeLayout
+		For feed.
+		Uses ViewPager. Is is used ot swipe left and right to different pages.
+	iii) BottomNavBarRelativeView
+		For switching between feed, camera, profile and suggestions.
+		Uses BottomNavigationView which is a standard implementaion of bottom navigation bar.
+
+5. Customize the border of top and bottom nav bars by creating new xml files in drawable folder.
+	These files use layer-list (array of items displayed in the order in which items are defined), an <item> is defined in it.
+	In this case the item is the border which has color and stroke.
+	Set colors to primary and primary variant so that they change with dark and light mode.
+	The left, right, bottom and top attributes are used to define the placement of the border on 4 sides of the component.
+
+6. Change the color of system status and navigation bar to primary color in themes.xml and themes.xml(night) so that is matches the app's navigation bars.
+
