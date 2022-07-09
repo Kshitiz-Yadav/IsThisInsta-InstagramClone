@@ -1,0 +1,11 @@
+1. Create new project. Make project a GIT repository.
+2. Remove the top action bar.
+
+CREATING THE HOME PAGE NAVIGATION BARS
+3. Divide the screen into three parts using co-ordinator layout.
+
+NOTE 1: Co-ordinator layout-
+	It is a super powered frame layout which is used to hold more than one child views. It allows interaction between different child views.
+	This allows different child views to be displayed without overlapping each other in devices of different sizes.
+
+4. Create a relative layout in the co-ordinator layout and then the 3 parts within that relative layout.
