@@ -53,7 +53,10 @@
                 android:id="@+id/bottomNavBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bottom_nav_bar_border_design">
+                android:background="@drawable/bottom_nav_bar_border_design"
+                app:menu="@menu/bottom_nav_bar_menu"
+                app:itemIconTint="@drawable/checked_icon_highlight_selector"
+                app:labelVisibilityMode="unlabeled">
             </com.google.android.material.bottomnavigation.BottomNavigationView>
         </RelativeLayout>
     </RelativeLayout>

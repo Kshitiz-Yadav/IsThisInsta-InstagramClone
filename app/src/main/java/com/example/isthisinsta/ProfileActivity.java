@@ -1,16 +1,16 @@
 package com.example.isthisinsta;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
-    private final String TAG = "MainActivity";
-    private final int ACTIVITY_NUM = 0;
-    
+public class ProfileActivity extends AppCompatActivity {
+    private final String TAG = "ProfileActivity";
+    private final int ACTIVITY_NUM = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: called");

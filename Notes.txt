@@ -29,3 +29,15 @@ ________________________________________________________________________________
 
 6. Change the color of system status and navigation bar to primary color in themes.xml and themes.xml(night) so that is matches the app's navigation bars.
 
+7. Create a new menu xml file for BottmNavigationMenu. Define items in it. For each item's icon import image in drawable as:
+	new -> Image Asset -> select icon type -> select clip art
+
+8. Create a class for navigation menu. Create activities for all the icons in the menu. Turn off animation between activity transition.
+
+9. In the NavBar class. Create a static function that sets onItemSelectedListener to the activity passed to it. Override the onItemSelected metdhod to switch to the selected activity and set selected icon as checked.
+
+10. Call the NavBar function from all activities so that they are set as listeners.
+
+11. Create a drawable selector which selects onPrimary color when icon is not selected and some other color when selected.
+
+12.
