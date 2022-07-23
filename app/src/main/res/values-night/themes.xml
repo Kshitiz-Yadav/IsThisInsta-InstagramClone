@@ -12,5 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
         <!-- Customize your theme here. -->
+
+        <!-- Setting color of menu overflow icon (three dots) -->
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 </resources>

@@ -11,16 +11,23 @@
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/home_page_icon_selector.xml" value="0.1555" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1555" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/layout_bottom_nav_bar_border.xml" value="0.1555" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/layout_secondary_color_border.xml" value="0.1555" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/layout_top_nav_bar_border.xml" value="0.1555" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/selector_checked_icon.xml" value="0.1555" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/drawable/top_nav_bar_border_design.xml" value="0.264" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/activity_profile.xml" value="0.24895833333333334" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/camera_fragment.xml" value="0.24791666666666667" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/fragment_home.xml" value="0.24895833333333334" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/fragment_messages.xml" value="0.15930388219544847" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/layout_bottom_nav_bar.xml" value="0.24791666666666667" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/nav_bar_border_design.xml" value="0.24895833333333334" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/nav_bars_design.xml" value="0.24895833333333334" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/no_animation_style.xml" value="0.24895833333333334" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/snippet_profile_counts.xml" value="0.264" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/layout/snippet_profile_mid_section.xml" value="0.24791666666666667" />
         <entry key="..\:/Codes/IsThisInsta/app/src/main/res/menu/bottom_nav_bar_menu.xml" value="0.24895833333333334" />
+        <entry key="..\:/Codes/IsThisInsta/app/src/main/res/menu/profile_page_menu.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>

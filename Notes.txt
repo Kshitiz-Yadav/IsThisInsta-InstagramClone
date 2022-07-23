@@ -53,3 +53,15 @@ ________________________________________________________________________________
 17. In home activity, set up the fragments.
 
 18. Customize tab layout to set icon color and no ripple effects.
+
+19. Create xml file for profile page and set content view this xml file in profile acivity.
+
+20. Add Toolbar to it and create text view for username. Include the previously created BottomNavBar as well.
+
+21. Create a new menu layout to get the profile page menu button. use "SetSupportActionBar" to set up the toolbar in the activity. Set onMenuItemClickedListener on the toolbar.
+
+22. Set up the menu overflow button's color in themes.xml.
+
+23. Create the posts, followers, following part of the profile page.
+
+24.s
