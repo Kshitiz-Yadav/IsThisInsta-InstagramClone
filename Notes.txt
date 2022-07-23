@@ -16,7 +16,7 @@ ________________________________________________________________________________
 		AppBarLayout when working with coordinatorLayout implements various scrolling gestures.
 	ii) MiddleSectionRelativeLayout
 		For feed.
-		Uses ViewPager. Is is used ot swipe left and right to different pages.
+		Uses ViewPager2. Is is used ot swipe left and right to different pages.
 	iii) BottomNavBarRelativeView
 		For switching between feed, camera, profile and suggestions.
 		Uses BottomNavigationView which is a standard implementaion of bottom navigation bar.
@@ -40,4 +40,16 @@ ________________________________________________________________________________
 
 11. Create a drawable selector which selects onPrimary color when icon is not selected and some other color when selected.
 
-12.
+12. Code cleanup. Make different packages for all 5 activities.
+
+13. Add new image assets for top nav bar.
+
+14. Create fragment layout for home, camera and messages.
+
+15. Create fragment class for home, camera and messages and inflate their respective layouts by overriding onCreateView method.
+
+16. Create a fragment adapter class to manage the adapter. It will also have an add fragment function.
+
+17. In home activity, set up the fragments.
+
+18. Customize tab layout to set icon color and no ripple effects.

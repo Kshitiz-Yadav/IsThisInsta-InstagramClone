@@ -1,16 +1,18 @@
-package com.example.isthisinsta;
+package com.example.isthisinsta.search;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.isthisinsta.BottomNavigationMenu;
+import com.example.isthisinsta.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
-    private final String TAG = "MainActivity";
-    private final int ACTIVITY_NUM = 0;
-    
+public class SearchActivity extends AppCompatActivity {
+    private final String TAG = "SearchActivity";
+    private final int ACTIVITY_NUM = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: called");
@@ -19,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setBottomNavBar();
-
     }
 
     private void setBottomNavBar() {

@@ -6,11 +6,16 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.isthisinsta.create.CreateActivity;
+import com.example.isthisinsta.home.MainActivity;
+import com.example.isthisinsta.notifications.NotificationsActivity;
+import com.example.isthisinsta.profile.ProfileActivity;
+import com.example.isthisinsta.search.SearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavigationMenu {
     @SuppressLint("NonConstantResourceId")
-    static void enableNavigation(Context context, BottomNavigationView view,int activityNum){
+    public static void enableNavigation(Context context, BottomNavigationView view,int activityNum){
 
         Menu menu = view.getMenu();
         MenuItem mItem = menu.getItem(activityNum);

@@ -1,10 +1,12 @@
-package com.example.isthisinsta;
+package com.example.isthisinsta.profile;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.isthisinsta.BottomNavigationMenu;
+import com.example.isthisinsta.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileActivity extends AppCompatActivity {

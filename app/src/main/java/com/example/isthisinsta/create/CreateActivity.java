@@ -1,15 +1,17 @@
-package com.example.isthisinsta;
+package com.example.isthisinsta.create;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.isthisinsta.BottomNavigationMenu;
+import com.example.isthisinsta.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class NotificationsActivity extends AppCompatActivity {
-    private final String TAG = "NotificationsActivity";
-    private final int ACTIVITY_NUM = 3;
+public class CreateActivity extends AppCompatActivity {
+    private final String TAG = "CreateActivity";
+    private final int ACTIVITY_NUM = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,8 @@ public class NotificationsActivity extends AppCompatActivity {
 
     }
 
-    private void setBottomNavBar() {
+    void setBottomNavBar() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavBar);
         BottomNavigationMenu.enableNavigation(this, bottomNavigationView, ACTIVITY_NUM);
     }
-
 }
