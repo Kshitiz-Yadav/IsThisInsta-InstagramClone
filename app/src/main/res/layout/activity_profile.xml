@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -35,6 +36,17 @@
                             android:textColor="?attr/colorOnPrimary"
                             android:textSize="20sp"
                             tools:ignore="HardcodedText"/>
+
+                        <ImageView
+                            android:id="@+id/profile_options_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_menu_overflow_button"
+                            android:layout_marginEnd="15dp"
+                            android:contentDescription="Menu Overflow Icon in Profile Page"
+                            app:tint="?attr/colorOnPrimary"
+                            tools:ignore="HardcodedText"/>
                     </RelativeLayout>
                 </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
@@ -61,11 +73,11 @@
             <GridView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:horizontalSpacing="1dp"
                 android:numColumns="3"
-                android:verticalSpacing="1dp"
-                android:gravity="center"
-                android:stretchMode="columnWidth">
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp">
 
             </GridView>
 
@@ -74,6 +86,7 @@
         <include layout="@layout/layout_bottom_nav_bar"/>
 
         <ProgressBar
+            android:id="@+id/profile_progress_bar"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"

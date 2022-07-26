@@ -1,12 +1,21 @@
 package com.example.isthisinsta.profile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.isthisinsta.BottomNavigationMenu;
 import com.example.isthisinsta.R;
@@ -23,6 +32,9 @@ public class ProfileActivity extends AppCompatActivity {
         this.overridePendingTransition(0, 0);
         setContentView(R.layout.activity_profile);
 
+        ProgressBar progressBar = findViewById(R.id.profile_progress_bar);
+        progressBar.setVisibility(View.GONE);
+
         setToolBar();
         setBottomNavBar();
     }
@@ -36,18 +48,15 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.topProfileToolBar);
         setSupportActionBar(toolbar);
 
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        ImageView profileMenu = findViewById(R.id.profile_options_menu);
+        profileMenu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                return false;
+            public void onClick(View view) {
+                Intent toProfileOptions = new Intent(ProfileActivity.this, ProfileOptionsActivity.class);
+                startActivity(toProfileOptions);
             }
         });
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.profile_page_menu, menu);
-        return true;
-    }
+
 }

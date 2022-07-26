@@ -1,15 +1,15 @@
 1. Create new project. Make project a GIT repository.
 2. Remove the top action bar by setting "NoActionBar" in themes.xml.
 
-CREATING THE HOME PAGE NAVIGATION BARS
-3. Divide the screen into three parts using co-ordinator layout.
+CREATING THE BOTTOM NAVIGATION BAR AND RESPECTIVE ACTIVITIES
+1. Divide the screen into three parts using co-ordinator layout.
 ___________________________________________________________________________________________________________________________________________________
 NOTE 1: Co-ordinator layout-
 	It is a super powered frame layout which is used to hold more than one child views. It allows interaction between different child views.
 	This allows different child views to be displayed without overlapping each other in devices of different sizes.
 ___________________________________________________________________________________________________________________________________________________
 
-4. Create a relative layout in the co-ordinator layout and then the 3 parts within that relative layout.
+2. Create a relative layout in the co-ordinator layout and then the 3 parts within that relative layout.
 	i) TopNavBarRelativeLayout
 		For holding the app name, chat plane.
 		Uses the AppBarLayout to implement toolbar. 
@@ -21,47 +21,72 @@ ________________________________________________________________________________
 		For switching between feed, camera, profile and suggestions.
 		Uses BottomNavigationView which is a standard implementaion of bottom navigation bar.
 
-5. Customize the border of top and bottom nav bars by creating new xml files in drawable folder.
+3. Customize the border of top and bottom nav bars by creating new xml files in drawable folder.
 	These files use layer-list (array of items displayed in the order in which items are defined), an <item> is defined in it.
 	In this case the item is the border which has color and stroke.
 	Set colors to primary and primary variant so that they change with dark and light mode.
 	The left, right, bottom and top attributes are used to define the placement of the border on 4 sides of the component.
 
-6. Change the color of system status and navigation bar to primary color in themes.xml and themes.xml(night) so that is matches the app's navigation bars.
+4. Change the color of system status and navigation bar to primary color in themes.xml and themes.xml(night) so that is matches the app's navigation bars.
 
-7. Create a new menu xml file for BottmNavigationMenu. Define items in it. For each item's icon import image in drawable as:
+5. Create a new menu xml file for BottmNavigationMenu. Define items in it. For each item's icon import image in drawable as:
 	new -> Image Asset -> select icon type -> select clip art
 
-8. Create a class for navigation menu. Create activities for all the icons in the menu. Turn off animation between activity transition.
+6. Create a class for navigation menu. Create activities for all the icons in the menu. Turn off animation between activity transition.
 
-9. In the NavBar class. Create a static function that sets onItemSelectedListener to the activity passed to it. Override the onItemSelected metdhod to switch to the selected activity and set selected icon as checked.
+7. In the NavBar class. Create a static function that sets onItemSelectedListener to the activity passed to it. Override the onItemSelected metdhod to switch to the selected activity and set selected icon as checked.
 
-10. Call the NavBar function from all activities so that they are set as listeners.
+8. Call the NavBar function from all activities so that they are set as listeners.
 
-11. Create a drawable selector which selects onPrimary color when icon is not selected and some other color when selected.
+9. Create a drawable selector which selects onPrimary color when icon is not selected and some other color when selected.
 
-12. Code cleanup. Make different packages for all 5 activities.
+10. Code cleanup. Make different packages for all 5 activities.
 
-13. Add new image assets for top nav bar.
+CREATING THE TOP NAV BAR AND HOME PAGE FRAGMENTS
+1. Add new image assets for top nav bar.
 
-14. Create fragment layout for home, camera and messages.
+2. Create fragment layout for home, camera and messages.
 
-15. Create fragment class for home, camera and messages and inflate their respective layouts by overriding onCreateView method.
+3. Create fragment class for home, camera and messages and inflate their respective layouts by overriding onCreateView method.
 
-16. Create a fragment adapter class to manage the adapter. It will also have an add fragment function.
+4. Create a fragment adapter class to manage the adapter. It will also have an add fragment function.
 
-17. In home activity, set up the fragments.
+5. In home activity, set up the fragments.
 
-18. Customize tab layout to set icon color and no ripple effects.
+6. Customize tab layout to set icon color and no ripple effects.
 
-19. Create xml file for profile page and set content view this xml file in profile acivity.
+CREATING THE PROFILE PAGE LAYOUT
+1. Create xml file for profile page and set content view this xml file in profile acivity.
 
-20. Add Toolbar to it and create text view for username. Include the previously created BottomNavBar as well.
+2. Add Toolbar to it and create text view for username. Include the previously created BottomNavBar as well.
 
-21. Create a new menu layout to get the profile page menu button. use "SetSupportActionBar" to set up the toolbar in the activity. Set onMenuItemClickedListener on the toolbar.
+3. Create a ImageView with image of a menu overflow button. Set on click listner to it.
 
-22. Set up the menu overflow button's color in themes.xml.
+4. Create the posts, followers, following part of the profile page.
 
-23. Create the posts, followers, following part of the profile page.
+5. Create a middle section layout for the profile page. Divide it into 2 linear layouts. 
 
-24.s
+6. The 1st is horizontal and contains the image view and profile count information. 
+
+7. THe 2nd is vertical and contains the user's name, bio, links.
+
+8. Below this middle section, create a gridview to hold all the posts of the user.
+
+9. Create a progress bar for the profile page as well. Hide it by setting its visibility to GONE in profile activity.
+
+CREATING OPTIONS PAGE FOR PROFILE PAGE
+1. Create a new options activity for the profile section. Override menu's imageview's onClick function to get to this activity.
+
+2. In this activity, set a top toolbar with page name and a ImageView having image of back button. Set on click listner to it and make it finish the options activity.
+
+3. Create a new snippet layout for middle section. It has a textView containing the title and then a listView which will contain all the options.
+
+4. Now to create fragments for each listView item, firstly create a layout for all item fragments.
+
+5. Create a profileFragmentAdapter class to implement all the fragments. Create Fragment activities for all options.
+
+6. In ProfileOptions class, add fragments to the adapter and set up the view pager. Set onItemClickedListener on the ListView.
+
+7. For all functions and information passing various fragment to num to name maps have been used in profileFragmentAdapter.
+
+
